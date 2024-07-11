@@ -18,8 +18,10 @@ func TestTwoSum(t *testing.T) {
 	}
 
 	for _, tt := range tests {
+
 		t.Run("", func(t *testing.T) {
 			result := twoSum(tt.nums, tt.target)
+
 			if !reflect.DeepEqual(result, tt.expected) {
 				t.Errorf("Expected indices %v for target %d, but got %v", tt.expected, tt.target, result)
 			}

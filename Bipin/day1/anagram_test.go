@@ -16,8 +16,10 @@ func TestIsAnagram(t *testing.T) {
 	}
 
 	for _, tt := range tests {
+
 		t.Run(tt.s+"-"+tt.t, func(t *testing.T) {
 			result := isAnagram(tt.s, tt.t)
+
 			if result != tt.expected {
 				t.Errorf("Expected %v, but got %v", tt.expected, result)
 			}
