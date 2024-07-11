@@ -1,6 +1,6 @@
-module github.com/Kenshi-Labs/Practice-Perfect
+module 02_valid_anagram
 
-go 1.22.4
+go 1.22.5
 
 require (
 	github.com/davecgh/go-spew v1.1.1 // indirect
