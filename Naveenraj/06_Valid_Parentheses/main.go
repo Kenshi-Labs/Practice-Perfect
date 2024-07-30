@@ -3,7 +3,9 @@ package main
 import "fmt"
 
 func main() {
-	input := ""
+	var input string
+	fmt.Println("Enter the Parentheses to check valid or not")
+	fmt.Scanln(&input)
 	fmt.Println(Valid_Parentheses(input))
 }
 
@@ -21,48 +23,6 @@ func Valid_Parentheses(input string) bool {
 	if len(input)%2 != 0 {
 		return false
 	}
-
-	// first method - failed in test case - {[]}
-
-	// for i := 0; i < len(input); i = i + 2 {
-	// 	expected := listOfBrackets[string(input[i])]
-	// 	if string(input[i+1]) != expected {
-	// 		return false
-	// 	}
-	// }
-
-	// second method - failed in test case - ([)]
-
-	// openMap := map[string]int{}
-	// closeMap := map[string]int{}
-	// for i := 0; i < len(input); i++ {
-	// 	if IsOpen_Parentheses(string(input[i])) {
-	// 		val, exist := openMap[string(input[i])]
-	// 		if exist {
-	// 			openMap[listOfBrackets[string(input[i])]] = val + 1
-	// 		} else {
-	// 			openMap[listOfBrackets[string(input[i])]] = 1
-	// 		}
-	// 	} else {
-	// 		val, exist := closeMap[string(input[i])]
-	// 		if exist {
-	// 			closeMap[string(input[i])] = val + 1
-	// 		} else {
-	// 			closeMap[string(input[i])] = 1
-	// 		}
-	// 	}
-	// }
-
-	// for key, countInOpenMap := range openMap {
-	// 	countInCloseMap := closeMap[key]
-	// 	if countInCloseMap != countInOpenMap {
-	// 		return false
-	// 	}
-	// }
-
-	// return true
-
-	//third method
 
 	stack := []string{}
 	for _, val := range input {
