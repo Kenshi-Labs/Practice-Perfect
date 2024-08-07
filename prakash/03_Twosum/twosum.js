@@ -1,21 +1,27 @@
+// const nums = [2, 7, 11, 15];
+// const target = 9;
+// const result = twosum(nums, target);
+// const result2 = twosum(nums, target);
+// console.log(result); 1st case
+// console.log(result2); // 2nd case
+
 function twosum(nums, target) {
-  // Initialize an empty map to store numbers and their indices
-  var numMap = {};
-  // Iterate over the array of numbers
-  for (var i = 0; i < nums.length; i++) {
-    // Calculate the complement of the current number
-    var complement = target - nums[i];
-    // Check if the complement exists in the map
-    if (numMap.hasOwnProperty(complement)) {
-      // hasOwnProperty return boolean has its checks if the complement already exists in numMap;
-      // If it exists, return the indices of the two numbers
-      return [numMap[complement], i];
+  // 1st case
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] + nums[i + 1] === target) {
+      return [i, i + 1];
     }
-    // Store the current number and its index in the map
-    numMap[nums[i]] = i;
   }
-  // If no solution is found, throw Error
-  throw new Error("No two sum solution");
+
+  // 2nd Case
+  for (let i = 0; i < nums.length; i++) {
+    for (let j = i + 1; j < nums.length; j++) {
+      if (nums[i] + nums[j] === target) {
+        return [i, j];
+      }
+    }
+  }
+  return [];
 }
 
 module.exports = twosum;
