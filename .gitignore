@@ -20,5 +20,5 @@
 # Go workspace file
 go.work
 go.work.sum
-./subrata/node_modules/
-./subrata/package-lock.json
+/subrata/node_modules/
+/subrata/package-lock.json
