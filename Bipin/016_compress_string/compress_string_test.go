@@ -4,8 +4,6 @@ import (
 	"testing"
 )
 
-// compressString function (insert your method here)
-
 // TestCompressString runs a variety of test cases using the testing package.
 func TestCompressString(t *testing.T) {
 	// Define test cases
