@@ -7,20 +7,20 @@ test("Test with a string containing a non-repeating character", () => {
 
 test("Test with a string where all characters repeat", () => {
   const input = "aabbcc";
-  expect(firstNonRepeatingChar(input)).toBeNull(); // No non-repeating characters
+  expect(firstNonRepeatingChar(input)).toBeNull();
 });
 
 test("Test with an empty string", () => {
   const input = "";
-  expect(firstNonRepeatingChar(input)).toBeNull(); // No characters to check
+  expect(firstNonRepeatingChar(input)).toBeNull();
 });
 
 test("Test with a string containing only one character", () => {
   const input = "x";
-  expect(firstNonRepeatingChar(input)).toEqual("x"); // Single character is non-repeating by default
+  expect(firstNonRepeatingChar(input)).toEqual("x");
 });
 
 test("Test with a string containing multiple non-repeating characters", () => {
   const input = "abcabcde";
-  expect(firstNonRepeatingChar(input)).toEqual("d"); // 'd' is the first non-repeating character
+  expect(firstNonRepeatingChar(input)).toEqual("d");
 });

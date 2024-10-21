@@ -8,17 +8,17 @@ test("Test with a string that can be compressed", () => {
 
 test("Test with a string that cannot be compressed", () => {
   const input = "abcd";
-  expect(compressString(input)).toEqual(input); // Since the compressed version is not smaller
+  expect(compressString(input)).toEqual(input);
 });
 
 test("Test with an empty string", () => {
   const input = "";
-  expect(compressString(input)).toEqual(input); // Should return an empty string
+  expect(compressString(input)).toEqual(input);
 });
 
 test("Test with a string containing no repeated characters", () => {
   const input = "abc";
-  expect(compressString(input)).toEqual(input); // Since no characters repeat, return the original string
+  expect(compressString(input)).toEqual(input);
 });
 
 test("Test with a string containing all repeated characters", () => {
@@ -29,5 +29,5 @@ test("Test with a string containing all repeated characters", () => {
 
 test("Test with a single character string", () => {
   const input = "a";
-  expect(compressString(input)).toEqual(input); // Single character should return the same string
+  expect(compressString(input)).toEqual(input);
 });
